@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ladecoplus</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'layouts/header' %>
+<%= render 'layouts/menu' %>
+<div id="notification">
+	<% flash.each do |key, value| %>
+		<div class='flash' id='<%= key %>'>
+			<%= value %>
+		</div>
+	<% end %>
+</div>
+<%= yield %>
+<%= render 'layouts/footer' %>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<section>
+	<header>
+		<h1>Users</h1>
+	</header>
+	<div>
+		<% if !@users.empty? %>
+		  <% for user in @users %>
+		  	<div>
+		  		<%= user %>
+		  	</div>  
+		  <% end %>
+		<% else %>
+		  <div>No users</div>
+		<% end %>
+	</div>
+</section>

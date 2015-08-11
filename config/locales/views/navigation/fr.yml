@@ -1,0 +1,16 @@
+fr:
+  menu:
+    home: Accueil
+    about: A propos de nous
+    log_in: se connecter
+    log_out: se deconnecter
+    users: Utilisateurs
+    join_us: Rejoin-nous
+    password_forgoten: mot de pass oublier
+    services: Services
+    your_services: Vos services
+    create_new_service: Creez un nouvau service
+    languages: Langues
+    service_languages: Nos services
+    your_galleries: Vos galeries
+    galleries: Galeries

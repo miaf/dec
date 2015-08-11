@@ -1,0 +1,14 @@
+<header id="header">
+	<span><%= language_selector %></span>
+	<div>
+		<span>
+			<% if current_user %>
+				Welcome <%= current_user %> <%= link_to I18n.t("menu.log_out"), log_out_path %>
+			<% else %>
+				<%= link_to t('menu.log_in'), log_in_path %> <span>or</span>
+				<%= link_to I18n.t('menu.password_forgoten'), forgot_password_path %>
+			<% end %>
+		</span>
+		
+	</div>
+</header>

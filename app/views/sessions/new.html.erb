@@ -1,0 +1,15 @@
+<h1>Log in</h1>
+<%= form_tag(create_path, method: :post, id: 'log_in') do %>
+	<p>
+		<%= label_tag :login_name %><br/>
+		<%= text_field_tag :login_name, params[:login_name] %>
+	</p>
+	<p>
+		<%= label_tag :password %><br/>
+		<%= password_field_tag :password %>
+	</p>
+	<p>
+    <%= submit_tag 'Sign In' %>&nbsp;&nbsp;&nbsp;
+    <%= submit_tag 'Clear Form', :type => 'reset' %>
+  </p>
+<% end %>

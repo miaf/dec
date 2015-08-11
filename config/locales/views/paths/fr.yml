@@ -1,0 +1,16 @@
+fr:
+  routes:
+    home: home
+    about_us: a-propos-de-nous
+    log_in: se-connecter
+    users: utilisateurs
+    change_password: changer-mot-de-pass
+    forgot_password: mot-de-pass-oublier
+    password_reset: re-etablir-mot-de-pass
+    services: services
+    your_services: vos-services
+    create_new_service: nouvau-service
+    languages: langues
+    service_languages: nos-services
+    your_galleries: vos-galeries
+    galleries: galeries

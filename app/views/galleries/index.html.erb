@@ -1,0 +1,14 @@
+<section>
+<header>
+	<h1>Galleries</h1>
+</header>
+<div id="services">
+	<% if !@galleries.empty? %>
+	  <% for gallery in @galleries %>
+	    <div><%= gallery.id %></div>
+	  <% end %>
+	<% else %>
+	  <div>No gallery</div>
+	<% end %>
+</div>
+</section>

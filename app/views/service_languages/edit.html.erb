@@ -1,0 +1,28 @@
+<section>
+	<header>
+		<h1>Editting <%= @service_language.service.user %></h1>
+	</header>
+	<div>
+		<%= form_for @service_language do |f| %>
+			<%= f.hidden_field :service_id %>
+			<p>
+				<%= f.text_field :slug %>
+			</p>
+			<p>
+				<%= f.label :language  %> <br/>
+				<select name="service_language[language]", id="service_language_language">
+				  <option>en</option>
+				  <option>fr</option>
+				</select>
+			</p>
+			<p>
+				<%= f.cktext_area :description %>
+			</p>
+			<p>
+				<%= f.cktext_area :content, :cols => 40, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
+			</p>
+			<%= f.submit "Submit", :disable_with => 'Submiting...' %>
+		<% end %>		
+
+	</div>
+</section>

@@ -1,0 +1,21 @@
+<section>
+	<header>
+		<h1>Services</h1>
+	</header>
+	<p><%= link_to I18n.t('menu.create_new_service'), new_service_path %> </p>
+	<p>
+		<%= form_for @service do |f| %>
+			<%= f.submit 'New service id' %>
+		<% end %>
+	</p>
+	
+	<div id="services">
+		<% if !current_user.services.empty? %>
+		  <% for service in current_user.services %>
+		    <div>Service id <%= service.id %>, User <%= service.user %> |||| <%= link_to "Details", service_path(service) %></div>
+		  <% end %>
+		<% else %>
+		  <div>No service</div>
+		<% end %>
+	</div>
+</section>

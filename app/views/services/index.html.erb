@@ -1,0 +1,14 @@
+<section>
+<header>
+	<h1>Services</h1>
+</header>
+<div id="services">
+	<% if !@services.empty? %>
+	  <% for service in @services %>
+	    <div><%= service.id %></div>
+	  <% end %>
+	<% else %>
+	  <div>No service</div>
+	<% end %>
+</div>
+</section>

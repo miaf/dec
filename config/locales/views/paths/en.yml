@@ -1,0 +1,16 @@
+en:
+  routes:
+    home: home
+    about_us: about-us
+    log_in: log-in
+    users: users
+    change_password: change-password
+    forgot_password: forgot-password
+    password_reset: password-reset
+    services: services
+    your_services: your-services
+    create_new_service: new-service
+    languages: languages
+    service_languages: our-services
+    your_galleries: your-galleries
+    galleries: galleries

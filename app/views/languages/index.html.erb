@@ -1,0 +1,23 @@
+<section>
+<header>
+	<h1>Services</h1>
+</header>
+<div>	
+	<p>
+		<%= form_for @language do |f| %>
+			<%= f.text_field :code %>
+			<%= f.text_field :name %>
+			<%= f.submit 'New language' %>
+		<% end %>
+	</p>
+</div>
+<div id="services">
+	<% if !@languages.empty? %>
+	  <% for language in @languages %>
+	    <div><%= language.id %> <%= language.code %> <%= language.name %></div>
+	  <% end %>
+	<% else %>
+	  <div>No language</div>
+	<% end %>
+</div>
+</section>

@@ -1,0 +1,16 @@
+en:
+  menu:
+    home: Home
+    about: About Us
+    log_in: log in
+    log_out: log out
+    users: Users
+    join_us: Join Us
+    password_forgoten: forgot your password
+    services: Services
+    your_services: Your services
+    create_new_service: Create a new service
+    languages: Languages
+    service_languages: Our services
+    your_galleries: Your galleries
+    galleries: Galleries

@@ -1,0 +1,17 @@
+<nav id="menu">
+	<ul>
+		<li><%= link_to I18n.t('menu.home'), root_path %></li>
+		<li><%= link_to I18n.t('menu.about'), about_us_path %></li>
+		<li><%= link_to I18n.t('menu.users'), users_path %></li>
+			<li><%= link_to I18n.t('menu.service_languages'), service_languages_path %></li>
+			<li><%= link_to I18n.t('menu.galleries'), galleries_path %></li>
+		<% if current_user %>
+			
+			<li><%= link_to I18n.t('menu.your_services'), your_services_path %></li>
+			<li><%= link_to I18n.t('menu.your_galleries'), your_galleries_path %></li>
+			<li><%= link_to I18n.t('menu.languages'), languages_path %></li>
+		<% else %>			
+			<li><%= link_to I18n.t('menu.join_us'), new_user_path %></li>
+		<% end %>
+	</ul>
+</nav>
