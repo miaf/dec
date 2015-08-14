@@ -22,14 +22,18 @@ Rails.application.routes.draw do
         end
         # resources :services
       end
+      get '/service_languages/:slug' => 'service_languages#show'#, as: :read_more
+      get '/service_languages/:slug' => 'service_languages#edit'#, as: :read_more
+      get 'user_services/:slug' => 'service_languages#read_more', as: :details
       get 'your_services' => 'services#your_services'
-      resources :services
+      get 'your_gallery' => 'gallery_languages#your_gallery'
       resources :languages
+      resources :services
       resources :service_languages
-      get 'service_languages/:slug' => 'service_languages#details', as: :details
+
       resources :galleries
-      get 'your_galleries' => 'galleries#your_galleries'
       resources :gallery_languages
+      
     end
   end
 end

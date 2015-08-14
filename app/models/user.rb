@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
 	has_many :services, inverse_of: :user
+	has_one :gallery, inverse_of: :user
+	# has_many :service_languages, through: :services
 
 	attr_accessor :password, :new_password, :previous_email, :previous_login_name, :previous_website, :remember_me
 	# validates_presence_of :password

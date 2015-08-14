@@ -1,0 +1,16 @@
+<section>
+	<header>
+		<h1>Our galleries</h1>
+	</header>
+	<div>
+		<% if !@gallery_languages.empty? %>
+		  <% for gallery_language in @gallery_languages %>
+		    <h3><%= gallery_language.language %> <%= gallery_language.slug %></h3>
+		    <p><%= gallery_language.description %></p>
+		    <p><%= link_to "Get into", gallery_language_path(gallery_language.slug) %></p>
+		  <% end %>
+		<% else %>
+		  <div>No Gallery</div>
+		<% end %>
+	</div>
+</section>

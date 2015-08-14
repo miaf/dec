@@ -1,9 +1,9 @@
 <section>
 	<header>
-		<h1><%= @service_language.language %> </h1>
+		<h1><%= @service_language.service.user %> </h1>
 	</header>
 	<p><%= @service_language.slug %></p>
 	<div><%= raw @service_language.description %></div>
 	<div><%= raw @service_language.content %></div>
-	<!--  -->
+	<%= link_to "Edit", edit_service_language_path(@service_language.slug) %>
 </section>

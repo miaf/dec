@@ -24,11 +24,15 @@
 				</select>
 			</p>
 			<p>
-				<%= f.text_field :slug %>
+				<%= f.text_field :name, placeholder: 'Gallery name' %>
+				<%= show_field_error(@gallery_language, :name) %>
+			</p>
+			<p>
+				<%= f.text_field :slug, placeholder: 'Gallery slug' %>
 				<%= show_field_error(@gallery_language, :slug) %>
 			</p>
 			<p>
-				<%= f.text_area :description, cols: 40 %>
+				<%= f.text_area :description, cols: 40, placeholder: 'Gallery description' %>
 				<%= show_field_error(@gallery_language, :description) %>
 			</p>
 			<p><%= f.submit "Submit", :disable_with => 'Submiting...' %></p>

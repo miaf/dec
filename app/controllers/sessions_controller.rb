@@ -5,12 +5,12 @@ class SessionsController < ApplicationController
 	def create
 		user = User.authenticate(params[:login_name], params[:password])
 		if user
-			if user.email_confirmed
-				session[:user_id] = "#{user.id}#{user.login_name}"
+			# if user.email_confirmed
+				session[:user_id] = user.id #{}"#{user.id}#{user.login_name}"
 				redirect_to [user]#, notice: 'Logged in!'
-			else
-				flash[:error] = "Please activate your account."
-			end
+			# else
+			# 	flash[:error] = "Please activate your account."
+			# end
 		else
 			flash.now.alert = "Invalid login or password"
 			render 'new'

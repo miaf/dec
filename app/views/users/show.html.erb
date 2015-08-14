@@ -1,4 +1,16 @@
 <section>
+	<p>		
+		<li><%= link_to I18n.t('menu.your_services'), services_path %></li>
+		<%if current_user.gallery %>
+			<li><%= link_to I18n.t('menu.your_gallery'), your_gallery_path %></li>
+		<% else %>
+			<%= form_for @gallery, url: gallery_path do |f| %>
+				<%= f.hidden_field :user_id %>
+				<%= f.submit I18n.t('menu.create_gallery') %>
+			<% end %>
+		<% end %>
+		
+	</p>
 	<header>
 		<h1>Welcome <%= current_user %></h1>
 	</header>

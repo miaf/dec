@@ -1,6 +1,9 @@
 class ServicesController < ApplicationController
+
+	before_action :load_current_user, only: [:create]
 	def index
-		@services = Service.all
+		
+		@services = Service.includes(:service_languages).where(services: {user_id: current_user.id})
 	end
 	def your_services
 		# @services = Service.join(:service_languages)#where("user_id = ?", current_user.id)
@@ -27,6 +30,6 @@ class ServicesController < ApplicationController
 
 	private
 	def load_current_user
-		# @current_user = 
+		@user = User.find(params[:user_id])
 	end
 end

@@ -1,5 +1,6 @@
 class Gallery < ActiveRecord::Base
-  belongs_to :service, inverse_of: :galleries
+  belongs_to :user, inverse_of: :gallery
   has_many :gallery_languages, inverse_of: :gallery
-  
+  # belongs_to :user,through: :service
+
 end

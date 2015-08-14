@@ -14,16 +14,17 @@
 ActiveRecord::Schema.define(version: 20150811090001) do
 
   create_table "galleries", force: :cascade do |t|
-    t.integer  "service_id", limit: 4, null: false
+    t.integer  "user_id",    limit: 4, null: false
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
 
-  add_index "galleries", ["service_id"], name: "index_galleries_on_service_id", using: :btree
+  add_index "galleries", ["user_id"], name: "index_galleries_on_user_id", using: :btree
 
   create_table "gallery_languages", force: :cascade do |t|
     t.integer  "gallery_id",  limit: 4,   null: false
     t.string   "language",    limit: 2,   null: false
+    t.string   "name",        limit: 30,  null: false
     t.string   "slug",        limit: 30,  null: false
     t.string   "description", limit: 255, null: false
     t.datetime "created_at",              null: false
@@ -88,7 +89,7 @@ ActiveRecord::Schema.define(version: 20150811090001) do
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["login_name"], name: "index_users_on_login_name", using: :btree
 
-  add_foreign_key "galleries", "services"
+  add_foreign_key "galleries", "users"
   add_foreign_key "gallery_languages", "galleries"
   add_foreign_key "service_languages", "services"
   add_foreign_key "services", "users"

@@ -1,0 +1,30 @@
+<section>
+	<header>
+		<h1><%= @gallery.user %>' gallery</h1>
+	</header>
+	<div>
+		<% if @gallery %>
+		  <% for gallery_language in @gallery.gallery_languages %>
+		    <div>
+		    	<h3><%= gallery_language.name %></h3>
+		    	<div>
+		    		<span><%= gallery_language.language %></span>
+			    	<p><%= gallery_language.description %></p>
+		    	</div>
+		    	<%= link_to "Edit" %>
+		    	<%= link_to "Delete" %>
+		    </div>
+		  <% end %>
+		<% else %>
+		  <div>Sorry No gallery</div>
+		<% end %>
+	</div>
+	<div id="imgs">
+		
+	</div>
+	<div id="new-imgs">
+		<%= form_for do |f| %>
+
+		<% end %>
+	</div>
+</section>

@@ -1,6 +1,6 @@
 <header id="header">
-	<span><%= language_selector %></span>
-	<div>
+	<div id='lang-user'>
+		<span><%= language_selector %></span>|||
 		<span>
 			<% if current_user %>
 				Welcome <%= current_user %> <%= link_to I18n.t("menu.log_out"), log_out_path %>
@@ -10,5 +10,10 @@
 			<% end %>
 		</span>
 		
+	</div>
+	<div id="logo">
+		<span>
+			<%= link_to "<span>la-deco</span><span id='plus'>+</span>".html_safe, root_path %>
+		</span>
 	</div>
 </header>

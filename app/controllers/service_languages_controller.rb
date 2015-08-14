@@ -13,14 +13,15 @@ class ServiceLanguagesController < ApplicationController
 		end
 	end
 	def show
-		@service_language = ServiceLanguage.find(params[:id])
+		@service_language = ServiceLanguage.find_by_slug(params[:slug])
 	end
 	def details
 		@service_language = ServiceLanguage.find_by_slug(params[:slug])
 	end
 	def edit
-		@service_language = ServiceLanguage.find_by_slug(params[:slug])
-		# @service_language.service = Service.find(params[:service_id])
+		@service_language = ServiceLanguage.find_by_slug(params[:id])
+		# if @service_language
+		# 	redirect_to 
 	end
 	def update
 		@service_language = ServiceLanguage.find(params[:id])
@@ -31,6 +32,12 @@ class ServiceLanguagesController < ApplicationController
 			render :edit, error: "Failure"
 		end
 	end
+	def read_more
+		@service_language = ServiceLanguage.find_by_slug(params[:slug])
+	end
+	# def your_services
+	# 	@services = ServiceLanguage.find(params[])
+	# end
 
 	private
 	def load_service

@@ -5,7 +5,7 @@
 <div id="services">
 	<% if !@galleries.empty? %>
 	  <% for gallery in @galleries %>
-	    <div><%= gallery.id %></div>
+	    <div><%= gallery.name %></div>
 	  <% end %>
 	<% else %>
 	  <div>No gallery</div>

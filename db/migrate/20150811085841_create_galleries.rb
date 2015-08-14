@@ -1,7 +1,8 @@
 class CreateGalleries < ActiveRecord::Migration
   def up
     create_table :galleries do |t|
-      t.belongs_to :service, index: true, foreign_key: true, null: false, required: true
+      t.belongs_to :user, index: true, foreign_key: true, null: false, required: true
+      
 
       t.timestamps null: false
     end

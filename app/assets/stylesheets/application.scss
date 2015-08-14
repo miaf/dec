@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html{}
+body{
+	margin: 3%;
+	padding: 2%;
+	font-size: 140%;
+}
+/*TAGS*/
+a{
+	text-decoration: none;
+}
+/*CLASSES*/
+
+/*HEADER*/
+#header {
+	border: 1px double #000000;
+	border-radius: 15px;
+	padding: 1%;
+	#lang-user{
+		text-align: right;
+		span{
+			margin: 0 1%;
+		}
+	}
+	#logo{
+		text-align: center;
+		font-size: 300%;
+		#plus{
+			color: #ff0000;
+		}
+	}
+}
+
+
+/*MENU*/
+#menu {
+	background: #e3ff2f;
+	font-size: 130%;
+	/*padding: 2px;*/
+	ul li{
+		display: inline-block;
+		list-style: none;
+		margin: 0 2% 0 0;
+
+	}
+	a{
+		color: green;	
+	}
+	a:hover{
+		background-color: blue;
+		color: yellow;
+		font-style: italic;
+	}
+	a:focus, a:active{
+		background-color: white;
+		color: orange;
+	}
+
+}
+
+/*FOOTER*/
+#footer{
+	border: 1px solid #000000;
+	border-radius: 10px;
+	/*margin: 0;
+	padding: 0;*/
+	#footer-menu, #contact, #media{
+		display: inline-block;
+		width: 32%;
+		border: 1px solid blue;
+		h3{
+			text-align: center;
+			text-decoration: underline;
+		}
+	}
+}

@@ -5,10 +5,10 @@
 	<div>
 		<% if !@service_languages.empty? %>
 		  <% for service_language in @service_languages %>
-		    <h3><%= service_language.language %></h3>
+		    <h3><%= service_language.language %> <%= service_language.slug %></h3>
 		    <p><%= raw service_language.description %></p>
 		    <div><%= raw service_language.content %></div>
-		    <p><%= link_to "Details", details_path(service_language) %></p>
+		    <p><%= link_to "Read more", service_language_path(service_language.slug) %></p>
 		  <% end %>
 		<% else %>
 		  <div>No Service</div>

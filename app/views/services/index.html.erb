@@ -5,7 +5,14 @@
 <div id="services">
 	<% if !@services.empty? %>
 	  <% for service in @services %>
-	    <div><%= service.id %></div>
+	  	<% for service_language in service.service_languages %>
+			<div>
+			    <%= service_language.id %><%= raw service_language.description %><%= service_language.id %>
+			    <%= link_to "Details", details_path(service_language.slug) %>
+			    
+		    </div>
+	  	<% end %>
+	    
 	  <% end %>
 	<% else %>
 	  <div>No service</div>

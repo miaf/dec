@@ -10,7 +10,7 @@
 					<%= f.submit 'New gallery' %>
 				<% end %>
 			<% else %>
-				<%= link_to "View gallery", 'gallery_path(@model)' %>
+				<%= link_to "View gallery", gallery_path(@service.gallery) %>
 			<% end %>
 		</p>
 		<div>

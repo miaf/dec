@@ -3,6 +3,7 @@ class CreateGalleryLanguages < ActiveRecord::Migration
     create_table :gallery_languages do |t|
       t.belongs_to :gallery, index: true, foreign_key: true, null: false, required: true
       t.string :language, null: false, limit: 2
+      t.string :name, null: false,limit: 30, unique: true
       t.string :slug, null: false, limit: 30, unique: true
       t.string :description, null: false
 
